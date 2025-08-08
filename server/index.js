@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 app.use(cors({
-    origin: process.env.NODE_ENV !== 'development' ? process.env.CLIENT_URL : process.env.CLIENT_URL,
+    origin: process.env.NODE_ENV !== 'development' ? process.env.CLIENT_URL : 'http://localhost:5173',
     credentials: true,
     methods: ['GET']
 }));
