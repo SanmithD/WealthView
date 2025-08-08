@@ -25,6 +25,7 @@ function TotalValues() {
 
   return (
     <div className="p-6 shadow rounded-xl w-full max-w-6xl mx-auto text-center">    
+    <h1 className="text-left text-3xl mb-3 font-bold tracking-wide" >Portfolio Overview</h1>
       {Array.isArray(holdings) && holdings.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col items-start bg-[#283039] text-white rounded-md px-6 py-4">

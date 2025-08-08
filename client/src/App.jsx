@@ -3,7 +3,7 @@ import Dashboard from "./pages/Dashboard"
 
 function App() {
   return (
-    <div className="h-screen bg-[#111418]" >
+    <div className="h-screen bg-[#111418] overflow-y-scroll " >
       <Toaster/> 
       <Dashboard/>
     </div>

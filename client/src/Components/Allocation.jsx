@@ -7,7 +7,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 function Allocation() {
   const { fetchAllocation, allocation } = UseStockStore();
-  const [activeTab, setActiveTab] = useState("marketCap");
+  const [activeTab, setActiveTab] = useState("sector");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
