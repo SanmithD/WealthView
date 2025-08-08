@@ -103,9 +103,9 @@ npm run dev
 ```
 
 ### 📷Screenshots
-📊 Holdings & Performance View
+📊 Holdings & Allocation
 <img width="1318" alt="Holdings View" src="https://github.com/user-attachments/assets/b974fb20-49b3-4631-9108-71718aecce47" />
-🧠 Performance Summary & Allocation
+🧠 Performance Summary 
 <img width="1319" alt="Performance" src="https://github.com/user-attachments/assets/b929fd03-b0a4-4561-b131-6ff2f12b4ddf" />
 📈 Timeline Comparison (Portfolio vs Nifty50 vs Gold)
 <img width="1298" alt="Comparison" src="https://github.com/user-attachments/assets/3404af2b-c0a4-4c7e-8e15-40bcf7d6ecec" />
