@@ -46,6 +46,7 @@ WealthView/
 ## 🧩 Dependencies
 
 ### Backend (`server/package.json`)
+```bash
 {
   "type": "module",
   "scripts": {
@@ -59,8 +60,10 @@ WealthView/
     "xlsx": "^0.18.5"
   }
 }
+```
 
 ### Frontend (`client/package.json`)
+```bash
 "dependencies": {
   "@tailwindcss/vite": "^4.1.11",
   "axios": "^1.11.0",
@@ -72,6 +75,7 @@ WealthView/
   "tailwindcss": "^4.1.11",
   "zustand": "^5.0.7"
 }
+```
 
 ### 🛠️ Getting Started
 1. Clone the Repository
