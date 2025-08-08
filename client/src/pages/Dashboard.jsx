@@ -13,7 +13,7 @@ function Dashboard() {
         fetchHoldings()
     },[]);
   return (
-    <div className="h-screen mx-auto p-4 mb-6 bg-[#111418]" >
+    <div className="h-screen md:p-4 mb-6 bg-[#111418]" >
         <div className="w-full p-6" >
             <TotalValues/>
             <Allocation/>

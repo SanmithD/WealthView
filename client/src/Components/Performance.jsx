@@ -1,9 +1,24 @@
-import { CategoryScale, Chart as ChartJS, Legend, LinearScale, LineElement, PointElement, Tooltip } from "chart.js";
+import {
+  CategoryScale,
+  Chart as ChartJS,
+  Legend,
+  LinearScale,
+  LineElement,
+  PointElement,
+  Tooltip,
+} from "chart.js";
 import { useEffect } from "react";
 import { Line } from "react-chartjs-2";
 import { UseStockStore } from "../store/UseStockStore";
 
-ChartJS.register(LineElement, PointElement, CategoryScale, LinearScale, Tooltip, Legend);
+ChartJS.register(
+  LineElement,
+  PointElement,
+  CategoryScale,
+  LinearScale,
+  Tooltip,
+  Legend
+);
 
 function Performance() {
   const { fetchPerformance, performance } = UseStockStore();
@@ -97,33 +112,61 @@ function Performance() {
     <div className="max-w-6xl mx-auto px-4 py-8">
       <h2 className="text-2xl font-semibold mb-6">Performance Comparison</h2>
 
-      <div className=" rounded-xl shadow-md p-6 mb-10">
-        <Line data={chartData} options={chartOptions} height={100} />
+      <div className="w-full rounded-xl shadow-md p-4 md:p-6 mb-10">
+        <div className="relative w-full h-[300px] md:h-[400px]">
+          <Line data={chartData} options={chartOptions} />
+        </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
         <div className="p-4 rounded-xl border border-blue-100">
-          <h3 className="font-semibold text-blue-700 mb-3 text-center">Portfolio</h3>
+          <h3 className="font-semibold text-blue-700 mb-3 text-center">
+            Portfolio
+          </h3>
           <div className="flex justify-center gap-4">
-            {renderReturnCard("1M", returns.portfolio["1month"], "text-blue-600")}
-            {renderReturnCard("3M", returns.portfolio["3months"], "text-blue-600")}
-            {renderReturnCard("1Y", returns.portfolio["1year"], "text-blue-600")}
+            {renderReturnCard(
+              "1M",
+              returns.portfolio["1month"],
+              "text-blue-600"
+            )}
+            {renderReturnCard(
+              "3M",
+              returns.portfolio["3months"],
+              "text-blue-600"
+            )}
+            {renderReturnCard(
+              "1Y",
+              returns.portfolio["1year"],
+              "text-blue-600"
+            )}
           </div>
         </div>
 
         {/* Nifty 50 */}
         <div className="p-4 rounded-xl border border-green-100">
-          <h3 className="font-semibold text-green-700 mb-3 text-center">Nifty 50</h3>
+          <h3 className="font-semibold text-green-700 mb-3 text-center">
+            Nifty 50
+          </h3>
           <div className="flex justify-center gap-4">
-            {renderReturnCard("1M", returns.nifty50["1month"], "text-green-600")}
-            {renderReturnCard("3M", returns.nifty50["3months"], "text-green-600")}
+            {renderReturnCard(
+              "1M",
+              returns.nifty50["1month"],
+              "text-green-600"
+            )}
+            {renderReturnCard(
+              "3M",
+              returns.nifty50["3months"],
+              "text-green-600"
+            )}
             {renderReturnCard("1Y", returns.nifty50["1year"], "text-green-600")}
           </div>
         </div>
 
         {/* Gold */}
         <div className=" p-4 rounded-xl border border-yellow-100">
-          <h3 className="font-semibold text-yellow-700 mb-3 text-center">Gold</h3>
+          <h3 className="font-semibold text-yellow-700 mb-3 text-center">
+            Gold
+          </h3>
           <div className="flex justify-center gap-4">
             {renderReturnCard("1M", returns.gold["1month"], "text-yellow-600")}
             {renderReturnCard("3M", returns.gold["3months"], "text-yellow-600")}
